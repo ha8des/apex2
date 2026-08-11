@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AYPEX.CO | Build. Grow. Connect.</title>
+
+  <meta
+    name="description"
+    content="AYPEX.CO helps businesses build their digital foundation, grow their operations, and connect with new opportunities."
+  />
+
+  <style>
+    :root {
+      --bg: #06101d;
+      --surface: #0b1829;
+      --surface-2: #102239;
+      --text: #f4f7fb;
+      --muted: #9eafc4;
+      --line: rgba(255, 255, 255, 0.11);
+      --cyan: #5cddff;
+      --violet: #8d7cff;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 12% 0%,
+          rgba(92, 221, 255, 0.13),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 15%,
+          rgba(141, 124, 255, 0.12),
+          transparent 30%
+        ),
+        var(--bg);
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(6, 16, 29, 0.78);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-container {
+      height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 0;
+    }
+
+    .badge {
+      display: inline-block;
+
+      padding: 7px 13px;
+
+      border: 1px solid var(--line);
+      border-radius: 100px;
+
+      background: rgba(255, 255, 255, 0.035);
+
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+
+      margin: 25px 0;
+
+      font-size: clamp(3.6rem, 9vw, 7.5rem);
+      line-height: 0.9;
+
+      letter-spacing: -0.075em;
+    }
+
+    .gradient-text {
+      background:
+        linear-gradient(
+          100deg,
+          #ffffff,
+          var(--cyan),
+          var(--violet)
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 700px;
+
+      color: var(--muted);
+
+      font-size: 1.15rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+
+      margin-top: 32px;
+
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 13px 20px;
+
+      border: 1px solid var(--line);
+      border-radius: 12px;
+
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: #f5f8ff;
+      color: #06101d;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-label {
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    h2 {
+      margin: 10px 0 17px;
+
+      font-size: clamp(2.1rem, 4.5vw, 3.7rem);
+      line-height: 1.05;
+
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 740px;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .grid-four {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 16px;
+
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 27px;
+
+      border: 1px solid var(--line);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.025)
+        );
+    }
+
+    .card-number {
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.1em;
+    }
+
+    .card h3 {
+      margin: 9px 0 8px;
+
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--muted);
+
+      font-size: 0.92rem;
+    }
+
+    /* =========================
+       TWO COLUMN
+    ========================= */
+
+    .two-column {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+
+      margin-top: 40px;
+    }
+
+    .list {
+      display: grid;
+
+      gap: 10px;
+
+      margin-top: 20px;
+    }
+
+    .list-item {
+      padding: 13px 15px;
+
+      border: 1px solid var(--line);
+      border-radius: 12px;
+
+      background: rgba(255, 255, 255, 0.025);
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
+
+    .quote {
+      max-width: 900px;
+
+      margin-top: 38px;
+
+      padding: 25px 28px;
+
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 18px 18px 0;
+
+      background: rgba(255, 255, 255, 0.035);
+
+      font-size: 1.3rem;
+      font-weight: 750;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values {
+      display: grid;
+
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 12px;
+
+      margin-top: 34px;
+    }
+
+    .value {
+      padding: 20px;
+
+      border: 1px solid var(--line);
+      border-radius: 16px;
+
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .value h3 {
+      margin-bottom: 5px;
+
+      font-size: 1rem;
+    }
+
+    .value p {
+      color: var(--muted);
+
+      font-size: 0.83rem;
+    }
+
+    /* =========================
+       ROADMAP
+    ========================= */
+
+    .roadmap {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: 40px;
+    }
+
+    .phase {
+      padding: 22px;
+
+      border: 1px solid var(--line);
+      border-radius: 18px;
+
+      background: var(--surface);
+    }
+
+    .phase strong {
+      display: block;
+
+      font-size: 1.05rem;
+    }
+
+    .phase p {
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 0.87rem;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 70px 25px;
+
+      border: 1px solid var(--line);
+      border-radius: 28px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(92, 221, 255, 0.08),
+          rgba(141, 124, 255, 0.08)
+        );
+    }
+
+    .cta p {
+      max-width: 650px;
+
+      margin: auto;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 28px 0;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+    }
+
+    .footer-content {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .grid-four,
+      .roadmap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .values {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .grid-four,
+      .roadmap,
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 650px;
+
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.7rem;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="container nav-container">
+
+      <a href="#" class="logo">
+        AYPEX<span>.CO</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#purpose">Purpose</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <span class="badge">
+        BUSINESS INFRASTRUCTURE & GROWTH
+      </span>
+
+      <h1>
+        Build.<br>
+        <span class="gradient-text">Grow.</span><br>
+        Connect.
+      </h1>
+
+      <p class="hero-description">
+        AYPEX.CO helps businesses build their digital foundation,
+        improve their operations, grow their presence, and connect
+        with new opportunities.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#pillars" class="button button-primary">
+          Explore AYPEX
+        </a>
+
+        <a href="#about" class="button button-secondary">
+          Our Foundation
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-label">
+          01 / THE IDEA
+        </div>
+
+        <h2>
+          Infrastructure for ambitious businesses.
+        </h2>
+
+        <p class="lead">
+          Many small and emerging businesses have good products
+          and ideas but struggle with digital tools, visibility,
+          systems and connections. AYPEX exists to make those
+          foundations easier to access.
+        </p>
+
+        <div class="quote">
+          “Businesses shouldn't have to figure everything out alone.”
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PILLARS
+    ========================= -->
+
+    <section id="pillars">
+
+      <div class="container">
+
+        <div class="section-label">
+          02 / OUR PILLARS
+        </div>
+
+        <h2>
+          Four ways AYPEX creates value.
+        </h2>
+
+        <div class="grid-four">
+
+          <div class="card">
+
+            <span class="card-number">
+              01
+            </span>
+
+            <h3>
+              BUILD
+            </h3>
+
+            <p>
+              Websites, branding, digital profiles,
+              business materials and foundational systems.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <span class="card-number">
+              02
+            </span>
+
+            <h3>
+              GROW
+            </h3>
+
+            <p>
+              Digital marketing, content, customer acquisition,
+              analytics and growth strategy.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <span class="card-number">
+              03
+            </span>
+
+            <h3>
+              CONNECT
+            </h3>
+
+            <p>
+              Networking, partnerships, suppliers,
+              clients, collaborations and opportunities.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <span class="card-number">
+              04
+            </span>
+
+            <h3>
+              OPTIMIZE
+            </h3>
+
+            <p>
+              Automation, CRM, workflows, productivity systems,
+              data organization and AI tools.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TARGET CUSTOMERS
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-label">
+          03 / WHO WE HELP
+        </div>
+
+        <h2>
+          Built for businesses that are still building.
+        </h2>
+
+
+        <div class="two-column">
+
+          <div class="card">
+
+            <h3>
+              Initial Focus
+            </h3>
+
+            <div class="list">
+
+              <div class="list-item">
+                Small & emerging businesses
+              </div>
+
+              <div class="list-item">
+                Local businesses
+              </div>
+
+              <div class="list-item">
+                Startups & solo entrepreneurs
+              </div>
+
+              <div class="list-item">
+                Service providers
+              </div>
+
+              <div class="list-item">
+                Young entrepreneurs
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>
+              What They Need
+            </h3>
+
+            <div class="list">
+
+              <div class="list-item">
+                Professional digital presence
+              </div>
+
+              <div class="list-item">
+                Better business systems
+              </div>
+
+              <div class="list-item">
+                Customer growth
+              </div>
+
+              <div class="list-item">
+                Useful technology
+              </div>
+
+              <div class="list-item">
+                Connections & opportunities
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION & VISION
+    ========================= -->
+
+    <section id="purpose">
+
+      <div class="container">
+
+        <div class="section-label">
+          04 / PURPOSE
+        </div>
+
+
+        <div class="two-column">
+
+          <div class="card">
+
+            <h3>
+              Mission
+            </h3>
+
+            <p class="lead">
+              To empower businesses with accessible technology,
+              professional services, strategic resources, and
+              meaningful connections so they can build stronger
+              foundations and grow sustainably.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>
+              Vision
+            </h3>
+
+            <p class="lead">
+              To become a trusted business infrastructure ecosystem
+              connecting businesses with the tools, services,
+              technology and opportunities they need to grow.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- VALUES -->
+
+        <div class="values">
+
+          <div class="value">
+
+            <h3>
+              Innovation
+            </h3>
+
+            <p>
+              Use technology to make business better.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Accessibility
+            </h3>
+
+            <p>
+              Make professional infrastructure easier to access.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Growth
+            </h3>
+
+            <p>
+              Create measurable value.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Trust
+            </h3>
+
+            <p>
+              Respect the confidence businesses place in us.
+            </p>
+
+          </div>
+
+
+          <div class="value">
+
+            <h3>
+              Connection
+            </h3>
+
+            <p>
+              Strong networks create stronger businesses.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ROADMAP
+    ========================= -->
+
+    <section id="roadmap">
+
+      <div class="container">
+
+        <div class="section-label">
+          05 / ROADMAP
+        </div>
+
+        <h2>
+          Start lean. Build the ecosystem later.
+        </h2>
+
+        <p class="lead">
+          AYPEX does not need to launch as a giant corporation.
+          Start with practical services, prove demand, build a
+          client base, and expand from there.
+        </p>
+
+
+        <div class="roadmap">
+
+          <div class="phase">
+
+            <strong>
+              AYPEX 1.0
+            </strong>
+
+            <p>
+              BUILD: digital foundations and business setup.
+            </p>
+
+          </div>
+
+
+          <div class="phase">
+
+            <strong>
+              AYPEX 2.0
+            </strong>
+
+            <p>
+              GROW: marketing, acquisition and strategy.
+            </p>
+
+          </div>
+
+
+          <div class="phase">
+
+            <strong>
+              AYPEX 3.0
+            </strong>
+
+            <p>
+              CONNECT: networking, partnerships and opportunities.
+            </p>
+
+          </div>
+
+
+          <div class="phase">
+
+            <strong>
+              AYPEX 4.0
+            </strong>
+
+            <p>
+              ECOSYSTEM: technology, automation, tools and network.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="cta">
+
+          <div class="section-label">
+            AYPEX.CO
+          </div>
+
+          <h2>
+            Build something businesses can build on.
+          </h2>
+
+          <p>
+            AYPEX starts with practical services and grows
+            toward a complete business infrastructure ecosystem.
+          </p>
+
+          <div
+            class="buttons"
+            style="justify-content:center"
+          >
+
+            <a
+              href="#about"
+              class="button button-primary"
+            >
+              Discover AYPEX
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        ©️ 2026 AYPEX.CO
+      </span>
+
+      <span>
+        Build. Grow. Connect.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
